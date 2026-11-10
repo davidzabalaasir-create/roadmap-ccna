@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Roadmap CCNA 200-301 v2.0</title>
+  <meta name="description" content="Plan de estudio de 22 semanas para el CCNA 200-301 v2.0: bloques oficiales, fases, laboratorios de Packet Tracer, simulacros y recursos.">
+  <meta name="theme-color" content="#0b1014">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <a class="skip" href="#plan">Saltar al plan</a>
+
+  <header class="nav" id="nav">
+    <a class="brand" href="#inicio" aria-label="Inicio">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="2.2"/><circle cx="19" cy="5" r="2.2"/><circle cx="19" cy="19" r="2.2"/><path d="M7 11.2 17 5.8M7 12.8l10 5.4"/></svg>
+      <span>CCNA<b>·</b>Roadmap</span>
+    </a>
+    <nav aria-label="Secciones">
+      <a href="#temario">Temario</a>
+      <a href="#plan">Plan</a>
+      <a href="#semana">Rutina</a>
+      <a href="#topologia">Topología</a>
+      <a href="#progreso">Progreso</a>
+      <a href="#recursos">Recursos</a>
+    </nav>
+    <div class="nav-progress" aria-hidden="true"><span id="navBar"></span></div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="inicio">
+      <canvas id="net" aria-hidden="true"></canvas>
+      <div class="wrap hero-grid">
+        <div>
+          <p class="eyebrow">Cisco · examen 200-301 · temario v2.0</p>
+          <h1>Roadmap <em>CCNA</em><br>en 22 semanas</h1>
+          <p class="lead">Del 16 de noviembre de 2026 al 18 de abril de 2027, a 7-10 horas por semana. Curso estructurado, laboratorios de Packet Tracer y un criterio claro para saber cuándo presentarse.</p>
+          <div class="cta">
+            <a class="btn primary" href="#plan">Ver el plan</a>
+            <a class="btn" href="#empezar">Empezar la semana 1</a>
+          </div>
+          <ul class="stats">
+            <li><b data-count="22">22</b><span>semanas</span></li>
+            <li><b data-count="5">5</b><span>bloques oficiales</span></li>
+            <li><b data-count="30">30</b><span>laboratorios</span></li>
+            <li><b data-count="4">4</b><span>simulacros</span></li>
+          </ul>
+        </div>
+
+        <aside class="card now" aria-live="polite">
+          <div class="ring" role="img" id="ringWrap" aria-label="Progreso del plan">
+            <svg viewBox="0 0 120 120"><circle class="ring-bg" cx="60" cy="60" r="52"/><circle class="ring-fg" id="ring" cx="60" cy="60" r="52"/></svg>
+            <div class="ring-text"><b id="pct">0%</b><span>completado</span></div>
+          </div>
+          <div class="now-info">
+            <p class="tag" id="nowTag">Hoy</p>
+            <h2 id="nowTitle">—</h2>
+            <p id="nowText">—</p>
+            <p class="small" id="nowCount">—</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- AVISO -->
+    <section class="wrap reveal">
+      <div class="alert">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 2 20h20L12 3z"/><path d="M12 10v5M12 17.5v.5"/></svg>
+        <div>
+          <h2>El temario cambia en febrero de 2027</h2>
+          <p>El temario <strong>v1.1</strong> (seis bloques) se examina por última vez el <strong>2 de febrero de 2027</strong>. Desde el <strong>3 de febrero</strong> entra el <strong>v2.0</strong>, con el mismo código 200-301 y <strong>cinco bloques</strong>. Este plan prepara el v2.0. Comprobado en Cisco Learning Network el 10/11/2026.</p>
+          <p class="links"><a href="https://learningnetwork.cisco.com/s/ccna-v2-exam-topics" rel="noopener">Temario v2.0</a><a href="https://learningnetwork.cisco.com/s/ccna-exam-topics" rel="noopener">Temario v1.1</a><a href="https://learningcontent.cisco.com/documents/marketing/exam-topics/200-301_CCNA_v2.0_Exam_Topics_PDF.pdf" rel="noopener">PDF oficial v2.0</a></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- TEMARIO -->
+    <section class="wrap section" id="temario">
+      <div class="head reveal">
+        <p class="eyebrow">01 · Temario oficial</p>
+        <h2>Bloques y peso en el examen</h2>
+        <p>120 minutos, 300 USD, en inglés o japonés. Opción múltiple, arrastrar y soltar y ejercicios prácticos. Cisco no publica la nota de corte.</p>
+        <div class="seg" role="tablist" aria-label="Versión del temario">
+          <button role="tab" aria-selected="true" data-ver="v2" id="tabV2">v2.0 · desde el 3 feb 2027</button>
+          <button role="tab" aria-selected="false" data-ver="v1" id="tabV1">v1.1 · hasta el 2 feb 2027</button>
+        </div>
+      </div>
+      <div class="stack reveal" id="stackBar" aria-hidden="true"></div>
+      <div class="blocks" id="blocks"></div>
+      <div class="cols3 reveal">
+        <div class="card mini"><h3>Añade por tu cuenta</h3><p>Aparece en v2.0 y falta en el material de v1.1: OSPFv3, VRRP, registros DNS, AAA con TACACS+/RADIUS, SFTP/SCP, storm control, RA guard, Ansible, IA en operaciones y diagnóstico de clientes Windows, macOS y Linux.</p></div>
+        <div class="card mini"><h3>Estudia por encima</h3><p>No figura en el listado v2.0: configuración gráfica de la WLC, JSON y API REST en detalle, Puppet/Chef/Terraform, QoS, TFTP/FTP. Confírmalo en el PDF oficial antes de descartarlo.</p></div>
+        <div class="card mini"><h3>Cambia el enfoque</h3><p>El v2.0 pide más diagnóstico. En cada laboratorio, además de configurar, rompe algo y arréglalo. «Configurar» y «resolver problemas» se preguntan con ejercicios prácticos.</p></div>
+      </div>
+    </section>
+
+    <!-- PLAN -->
+    <section class="wrap section" id="plan">
+      <div class="head reveal">
+        <p class="eyebrow">02 · Plan por fases</p>
+        <h2>Seis fases, de la base al examen</h2>
+        <p>Marca cada semana y cada laboratorio al terminarlos. El progreso se guarda en este navegador.</p>
+        <div class="tools">
+          <button class="btn sm" id="expandAll" type="button">Desplegar todo</button>
+          <button class="btn sm ghost" id="resetAll" type="button">Borrar mi progreso</button>
+        </div>
+      </div>
+      <ol class="timeline" id="timeline"></ol>
+    </section>
+
+    <!-- RUTINA -->
+    <section class="wrap section" id="semana">
+      <div class="head reveal">
+        <p class="eyebrow">03 · Rutina</p>
+        <h2>Cómo es una semana de estudio</h2>
+        <p>Reparto orientativo para 8-9 horas.</p>
+      </div>
+      <div class="week reveal" id="weekGrid"></div>
+      <div class="cols2 reveal">
+        <ul class="rules">
+          <li>Guarda cada laboratorio como <code>.pkt</code> en <code>labs\</code> con el nombre <code>S03-L1-subnetting.pkt</code>.</li>
+          <li>Lleva un archivo <code>errores.md</code>: cada pregunta fallada, por qué fallaste y la regla correcta.</li>
+        </ul>
+        <ul class="rules">
+          <li>Parte siempre de una copia de <code>base.pkt</code> para no perder tiempo dibujando.</li>
+          <li>Antes de mirar la chuleta de <a href="https://davidzabalaasir-create.github.io/sysadmin-cheatsheet/" rel="noopener">Sysadmin</a>, intenta escribir el comando de memoria.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- TOPOLOGIA -->
+    <section class="wrap section" id="topologia">
+      <div class="head reveal">
+        <p class="eyebrow">04 · Laboratorio</p>
+        <h2>Topología base</h2>
+        <p>La misma en todos los laboratorios: R1 y R2, SW1 y SW2, tres VLAN.</p>
+      </div>
+      <div class="topo card reveal">
+        <svg viewBox="0 0 760 380" role="img" aria-label="Diagrama: Internet conectado a R1, R1 conectado a R2 y a SW1, SW1 y SW2 unidos por EtherChannel, con equipos en las VLAN 10, 20 y 99">
+          <g class="links">
+            <path class="link flow" d="M120 70H250"/>
+            <path class="link flow" d="M310 70H510"/>
+            <path class="link flow" d="M280 100V200"/>
+            <path class="link flow" d="M540 100V200"/>
+            <path class="link ec" d="M312 222H508"/>
+            <path class="link ec" d="M312 238H508"/>
+            <path class="link" d="M250 255 150 320"/>
+            <path class="link" d="M280 260V320"/>
+            <path class="link" d="M310 255 410 320"/>
+            <path class="link" d="M540 260V320"/>
+            <path class="link" d="M570 255 660 320"/>
+          </g>
+          <g class="node cloud"><rect x="30" y="45" width="90" height="50" rx="25"/><text x="75" y="75">Internet</text></g>
+          <g class="node router"><circle cx="280" cy="70" r="30"/><text x="280" y="75">R1</text></g>
+          <g class="node router"><circle cx="540" cy="70" r="30"/><text x="540" y="75">R2</text></g>
+          <g class="node switch"><rect x="250" y="200" width="60" height="60" rx="10"/><text x="280" y="235">SW1</text></g>
+          <g class="node switch"><rect x="510" y="200" width="60" height="60" rx="10"/><text x="540" y="235">SW2</text></g>
+          <g class="node pc v10"><rect x="105" y="320" width="90" height="40" rx="8"/><text x="150" y="345">VLAN 10</text></g>
+          <g class="node pc v20"><rect x="235" y="320" width="90" height="40" rx="8"/><text x="280" y="345">VLAN 20</text></g>
+          <g class="node pc v99"><rect x="365" y="320" width="90" height="40" rx="8"/><text x="410" y="345">VLAN 99</text></g>
+          <g class="node pc v10"><rect x="495" y="320" width="90" height="40" rx="8"/><text x="540" y="345">VLAN 10</text></g>
+          <g class="node pc v20"><rect x="615" y="320" width="90" height="40" rx="8"/><text x="660" y="345">VLAN 20</text></g>
+          <g class="labels">
+            <text x="185" y="60">203.0.113.0/30</text>
+            <text x="410" y="60">10.0.0.0/30</text>
+            <text x="410" y="212">EtherChannel LACP</text>
+            <text x="238" y="155" text-anchor="end">trunk 802.1Q</text>
+            <text x="582" y="155" text-anchor="start">LAN 192.168.30.0/24</text>
+          </g>
+        </svg>
+        <ul class="legend">
+          <li><i class="dot v10"></i><b>VLAN 10 Ventas</b> 192.168.10.0/24 · 2001:db8:10::/64</li>
+          <li><i class="dot v20"></i><b>VLAN 20 Contabilidad</b> 192.168.20.0/24 · 2001:db8:20::/64</li>
+          <li><i class="dot v99"></i><b>VLAN 99 Gestión</b> 192.168.99.0/24 · 2001:db8:99::/64</li>
+          <li><i class="dot r"></i><b>R1–R2</b> 10.0.0.0/30 · 2001:db8:12::/64</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- PROGRESO -->
+    <section class="wrap section" id="progreso">
+      <div class="head reveal">
+        <p class="eyebrow">05 · Progreso</p>
+        <h2>Cuándo presentarte</h2>
+        <p>Cuatro simulacros completos de 120 minutos, sin pausas ni apuntes, y cinco condiciones para reservar.</p>
+      </div>
+      <div class="cols2">
+        <div class="card reveal">
+          <h3>Simulacros</h3>
+          <div class="mocks" id="mocks"></div>
+          <p class="small">Usa simulacros de v2.0. Los de v1.1 valen como práctica, pero su nota no decide la fecha.</p>
+        </div>
+        <div class="card reveal">
+          <h3>Reserva el examen cuando cumplas todo</h3>
+          <ul class="checks" id="criteria"></ul>
+          <p class="verdict" id="verdict"></p>
+        </div>
+      </div>
+      <div class="cols3 reveal">
+        <div class="card mini"><h3>Cada día</h3><p>Anki y cinco ejercicios de subnetting.</p></div>
+        <div class="card mini"><h3>Cada semana</h3><p>Test corto del tema y actualización de <code>errores.md</code>.</p></div>
+        <div class="card mini"><h3>Cada fase</h3><p>El control indicado. Con menos del 80 %, una semana de refuerzo antes de avanzar. El plan admite dos semanas de retraso.</p></div>
+      </div>
+    </section>
+
+    <!-- RECURSOS -->
+    <section class="wrap section" id="recursos">
+      <div class="head reveal">
+        <p class="eyebrow">06 · Recursos</p>
+        <h2>Con qué estudiar</h2>
+        <p>Antes de pagar nada, comprueba que el material indique v2.0 o tenga actualización prevista.</p>
+      </div>
+      <div class="cols2">
+        <div class="reveal"><h3 class="pill free">Gratuitos</h3><ul class="res" id="resFree"></ul></div>
+        <div class="reveal"><h3 class="pill paid">De pago</h3><ul class="res" id="resPaid"></ul></div>
+      </div>
+    </section>
+
+    <!-- EMPEZAR -->
+    <section class="wrap section" id="empezar">
+      <div class="head reveal">
+        <p class="eyebrow">07 · Primera semana</p>
+        <h2>Del 16 al 22 de noviembre de 2026</h2>
+        <p>Antes del lunes 16: cuenta en netacad.com, Packet Tracer instalado, PDF del temario v2.0 descargado, carpeta <code>labs\</code>, archivo <code>errores.md</code> y diagnóstico inicial hecho.</p>
+      </div>
+      <ol class="first" id="firstWeek"></ol>
+      <p class="goal reveal">Al terminar la semana debes poder dejar un router y un switch accesibles por SSH desde cero sin mirar apuntes, y decir qué problema indica cada contador de <code>show interfaces</code>.</p>
+    </section>
+  </main>
+
+  <footer class="wrap foot">
+    <p>Plan personal de estudio. No está afiliado a Cisco. CCNA y Packet Tracer son marcas de Cisco Systems, Inc.</p>
+    <p><a href="ROADMAP-CCNA.md">Versión en Markdown</a> · <a href="https://davidzabalaasir-create.github.io/sysadmin-cheatsheet/" rel="noopener">Sysadmin, chuleta de comandos</a></p>
+  </footer>
+
+  <script src="assets/data.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>
